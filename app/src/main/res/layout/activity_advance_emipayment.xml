@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AdvanceEMIPayment">
+
+    <RelativeLayout
+        android:id="@+id/rl_advance_emi_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/advance_emi_back_img"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/calibri_bold"
+            android:text="Advance EMI Payment"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_20" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_advance_emi_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorLighterGrey"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/xml_bgleftradius"
+                        android:fontFamily="@font/calibri_bold"
+                        android:gravity="center"
+                        android:text="Branch Code"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_13" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorWhite"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="001"
+                        android:textColor="@color/colorBlack" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/xml_bgleftradius"
+                        android:fontFamily="@font/calibri_bold"
+                        android:gravity="center"
+                        android:text="Opening Date"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_13" />
+
+                    <TextView
+                        android:id="@+id/txt_ac_op_date"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorWhite"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="HO"
+                        android:textColor="@color/colorBlack" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Loan ID-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Loan ID"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/loan_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Applicant Name :-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Applicant Name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/edit_applic_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorLighterGrey"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Loan Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Loan Amount"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/edit_loan_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorLighterGrey"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:maxLength="10"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--EMI Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="EMI Amount"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/edit_emi_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorLighterGrey"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:maxLength="10"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Total principle paid-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Toatal Principle Paid"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/edit_principle_paid"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorLighterGrey"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:maxLength="10"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Total interest paid-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Toatal Interest Paid"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/edit_interest_paid"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorLighterGrey"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:maxLength="10"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Advance Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Advance Amount"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/edit_advance_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorLighterGrey"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:maxLength="10"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Pay No-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Pay No."
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/edit_pay_no"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorLighterGrey"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:maxLength="10"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Pay Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Pay Amount"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/edit_pay_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorWhite"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:hint="Enter amount"
+                    android:inputType="number"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Pay Data-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Pay Data"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/pay_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Pay Mode-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Pay Mode"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/pay_mode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Submit Button:-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_save_advance_emi"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/xml_back_btn"
+                    android:fontFamily="@font/calibri_bold"
+                    android:inputType="text"
+                    android:text="Save"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_18" />
+
+            </LinearLayout>
+
+            <!--Due & Paid Button:-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <TextView
+                    android:id="@+id/text_due"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Show Due"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_view_18" />
+
+                <TextView
+                    android:id="@+id/text_paid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Show Paid"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_view_18" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

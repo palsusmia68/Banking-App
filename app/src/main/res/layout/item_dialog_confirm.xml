@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:padding="25dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/xml_dialog_border">
+
+        <RelativeLayout
+            android:id="@+id/li_dialog_header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/dialog_img"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/alert_icon" />
+
+            <TextView
+                android:id="@+id/dialog_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/dialog_img"
+                android:fontFamily="@font/calibri_bold"
+                android:gravity="center"
+                android:text="Please confirm"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_20" />
+
+            <ImageView
+                android:id="@+id/dialog_img_cancel"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_clear_white"
+                android:layout_marginRight="10dp"
+                android:padding="3dp"
+                android:layout_alignParentRight="true" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/li_dialog_header"
+            android:background="@drawable/xml_dialog_middle_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri_bold"
+                android:text="Are you sure want to procceed?"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_20"
+                android:layout_marginBottom="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_yes"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/xml_back_btn"
+                    android:fontFamily="@font/calibri_bold"
+                    android:inputType="text"
+                    android:text="Yes"
+                    android:textColor="@color/colorWhite" />
+
+
+                <Button
+                    android:id="@+id/btn_no"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/xml_back_btn"
+                    android:fontFamily="@font/calibri_bold"
+                    android:inputType="text"
+                    android:text="No"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

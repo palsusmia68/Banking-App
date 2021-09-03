@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.NewAgentJoining">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_new_header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="@drawable/login_background">
+
+            <ImageView
+                android:id="@+id/img_mem_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/back"
+                android:layout_marginLeft="5dp"
+                android:padding="12dp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="New Member Joining"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/text_view_18"
+                android:textColor="@color/colorWhite"
+                android:layout_toRightOf="@id/img_mem_back" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:id="@+id/logout"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/logout" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_new_header">
+
+            <LinearLayout
+                android:id="@+id/li_profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:focusable="true"
+                android:gravity="center"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorLighterGrey"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Branch Code"
+                            android:textSize="@dimen/text_view_13"
+                            android:fontFamily="@font/calibri_bold"
+                            android:textColor="@color/colorWhite"
+                            android:background="@drawable/xml_bgleftradius"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_branch_code"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:text="002"
+                            android:fontFamily="@font/calibri_normal"
+                            android:backgroundTint="@color/colorWhite" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Branch Name"
+                            android:textSize="@dimen/text_view_13"
+                            android:fontFamily="@font/calibri_bold"
+                            android:textColor="@color/colorWhite"
+                            android:background="@drawable/xml_bgleftradius"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_branch_name"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:text="HOHO"
+                            android:fontFamily="@font/calibri_normal"
+                            android:backgroundTint="@color/colorWhite" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:gravity="center">
+
+                    <!--For User Profile Image Change: -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:src="@drawable/own_profile"
+                            android:layout_marginTop="5dp"
+                            app:border_color="@color/colorPrimary"
+                            app:border_width="3dp" />
+
+                        <Button
+                            android:id="@+id/chng_dp"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:text="Change picture"
+                            android:textColor="@color/colorWhite"
+                            android:fontFamily="@font/calibri_bold"
+                            android:background="@drawable/xml_bgcurve"
+                            android:layout_below="@+id/profile_image"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp" />
+
+
+                    </LinearLayout>
+
+                    <!--For User Fingerprint Capture: -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_fingerprint"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="5dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/ic_fingerprint_red"
+                            android:background="@drawable/xml_fingerprint_back" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="Please put your fingerprint"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="18sp"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/calibri_bold"
+                            android:layout_marginTop="5dp" />
+
+                    </LinearLayout>
+
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--android:layout_marginTop="70dp"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:layout_toRightOf="@+id/profile_image"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/btn_vote"-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:src="@drawable/camera"-->
+                    <!--android:text="Vote"-->
+                    <!--android:textColor="@android:color/white" />-->
+
+                    <!--</LinearLayout>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtEventLog"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorLightGrey" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/xml_bgcurve"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Account Details"
+                        android:textSize="@dimen/text_view_18"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="* Application No"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_application_no"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:hint="Enter Application No."
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Member Type"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite">
+
+                        <Spinner
+                            android:id="@+id/spin_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_view_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Applicant Name :-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/xml_bgleftradius"
+                        android:fontFamily="@font/calibri_bold"
+                        android:gravity="center"
+                        android:text="* Applicant Name:"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <EditText
+                        android:id="@+id/edit_member_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:inputType="textCapCharacters"
+                        android:hint="Enter Name"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Gender"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite">
+
+                        <Spinner
+                            android:id="@+id/spin_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_view_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Date of Joining:-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Father Name"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_f_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Enter Father Name"
+                        android:inputType="textCapCharacters"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Date of Birth:-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="DOJ"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <TextView
+                        android:id="@+id/txt_doj"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:background="@color/colorLighterGrey"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:textColor="@color/colorBlack" />
+
+                    <!--<Button-->
+                    <!--android:id="@+id/edit_doj"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="0.3"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="...."-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:background="@color/colorPrimary"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="DOB"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <TextView
+                        android:id="@+id/txt_dob"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.9"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="DOB"
+                        android:inputType="textCapCharacters"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <Button
+                        android:id="@+id/edit_dob"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:text="...."
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgcurve" />
+
+                </LinearLayout>
+
+                <!--Address: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Address:"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_add"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1.2"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:hint="Address."
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="PIN CODE:"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_pin_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Pin No."
+                        android:maxLength="5"
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Age:"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_age"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Age."
+                        android:maxLength="5"
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Phone No:"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_phone_no"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Phone No"
+                        android:maxLength="5"
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Email"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_email"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Enter your email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="PAN No:"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_pan_no"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Pan No"
+                        android:maxLength="10"
+                        android:inputType="textCapCharacters"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="ADHAR No:"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_adhar_no"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Adhar No"
+                        android:maxLength="12"
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/xml_bgcurve"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nominee Details"
+                        android:textSize="@dimen/text_view_18"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Nominee Name: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Nominee Name"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_nominee"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Enter Nominee Name"
+                        android:inputType="textCapCharacters"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Nominee Relation : -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Nominee Age"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_nom_age"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:maxLength="2"
+                        android:hint="Enter Nominee Age"
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Nominee Relation Type: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Nominee Relation"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite">
+
+                        <Spinner
+                            android:id="@+id/spin_nominee_rel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_view_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/xml_bgcurve"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bank Details"
+                        android:textSize="@dimen/text_view_18"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Bank Name: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Bank Name"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_bank_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Bank Name"
+                        android:inputType="textCapCharacters"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Bank A/C No: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Bank A/C No"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_bank_ac"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Bank A/C No"
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Remarks: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="IFSC"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_ifc_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="IFSC Code"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Branch Code"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_branch_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="IFSC Code"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/xml_bgcurve"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Introducer Details"
+                        android:textSize="@dimen/text_view_18"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Form Number :-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Introducer Code:"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/edit_form"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Form No."
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Rank :-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Rank:"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgcurve" />
+
+                    <TextView
+                        android:id="@+id/txt_rank"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorLightGrey" />
+
+                </LinearLayout>
+
+                <!--Introducer Name :-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Introducer Name:"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <TextView
+                        android:id="@+id/edit_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Pay Type"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite">
+
+                        <Spinner
+                            android:id="@+id/pay_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_view_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Registration Amount"
+                        android:textSize="@dimen/text_view_14"
+                        android:fontFamily="@font/calibri_bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/xml_bgleftradius" />
+
+                    <EditText
+                        android:id="@+id/et_rgamount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Save Button:-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <Button
+                        android:id="@+id/buttn_new_member_save"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/xml_back_btn"
+                        android:text="Save"
+                        android:inputType="text"
+                        android:textSize="@dimen/text_view_18"
+                        android:textColor="@color/colorWhite"
+                        android:fontFamily="@font/calibri_bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+</layout>

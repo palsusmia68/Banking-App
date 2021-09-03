@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MemberProfile">
+
+    <RelativeLayout
+        android:id="@+id/rl_member_profile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_background">
+
+        <ImageView
+            android:id="@+id/img_member_profile"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/back"
+            android:padding="8dp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Member Profile"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_16"
+            android:fontFamily="@font/calibri_bold" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/member_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_member_profile">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

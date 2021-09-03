@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EMICollection">
+
+    <RelativeLayout
+        android:id="@+id/rl_emi_payment_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_background">
+
+        <ImageView
+            android:id="@+id/emi_payment_img_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/txt_rnwl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/calibri_bold"
+            android:text="EMI Collection"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_18" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_emi_payment_header">
+
+        <LinearLayout
+            android:id="@+id/li_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <AutoCompleteTextView
+                android:id="@+id/et_loan_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.6"
+                android:background="@drawable/xml_search_bg"
+                android:completionThreshold="1"
+                android:fontFamily="@font/calibri_normal"
+                android:gravity="center"
+                android:hint="Select Applicant"
+                android:inputType="textAutoComplete"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_view_11" />
+
+            <Button
+                android:id="@+id/btn_show"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="0.4"
+                android:background="@drawable/xml_bgrightradius"
+                android:fontFamily="@font/calibri_normal"
+                android:text="Show"
+                android:visibility="visible"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/li_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_below="@+id/li_search"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorLighterGrey"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/xml_red_box"
+                android:gravity="center"
+                android:text="Loan ID"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/xml_red_box"
+                android:gravity="center"
+                android:text="App Name"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/xml_red_box"
+                android:gravity="center"
+                android:text="Loan Amount"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/xml_red_box"
+                android:gravity="center"
+                android:text="EMI"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/xml_red_box"
+                android:gravity="center"
+                android:text="Total Paid"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/xml_red_box"
+                android:gravity="center"
+                android:text="Action"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_loan"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/li_header"
+            android:background="@color/colorLighterGrey">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

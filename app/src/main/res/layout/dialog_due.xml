@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:padding="25dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/xml_dialog_border"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/li_due"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/li_dialog_header"
+            android:background="@drawable/xml_dialog_middle_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_due"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/calibri_normal"
+                android:gravity="center"
+                android:text="Show Due"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_16" />
+
+            <LinearLayout
+                android:id="@+id/li_header"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/text_due"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Loan Id"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Emi No."
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Date"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Amount"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/due_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btn_ok"
+                android:layout_below="@+id/li_header">
+
+            </ListView>
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/xml_back_btn"
+                android:fontFamily="@font/calibri_bold"
+                android:gravity="center"
+                android:inputType="text"
+                android:text="OK"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_18" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

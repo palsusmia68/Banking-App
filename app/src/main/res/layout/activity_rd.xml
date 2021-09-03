@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RDActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_rd_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_background">
+
+        <ImageView
+            android:id="@+id/img_rd"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:padding="8dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/calibri_bold"
+            android:text="New RD"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_16" />
+
+        <TextView
+            android:id="@+id/hide"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/tv_title"
+            android:gravity="center"
+            android:text="hhhh"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_rd_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <!--Branch Code & Branch Name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_margin="1dp"
+                android:background="@color/colorLighterGrey"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="Branch Code"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_12" />
+
+                    <TextView
+                        android:id="@+id/tv_bCode"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorWhite"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="001"
+                        android:textColor="@color/colorBlack" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="Branch Name"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_12" />
+
+                    <TextView
+                        android:id="@+id/tv_bName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorWhite"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="HO"
+                        android:textColor="@color/colorBlack" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--Member Details:-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorLighterGrey"
+                android:gravity="center|start"
+                android:paddingLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/calibri_bold"
+                    android:text="Member Details : "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Policy Date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Policy Date"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/txt_policy_date"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+
+            <!--Select Member-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Select Member *"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/tvAuto_member"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_view_14"/>
+                <AutoCompleteTextView
+                    android:id="@+id/tvAuto_member2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_view_14"/>
+                <ImageButton
+                    android:layout_marginLeft="2dp"
+                    android:id="@+id/ib_search"
+                    android:layout_width="0dp"
+                    android:src="@drawable/ic_search"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/xml_red_box" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:visibility="gone"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/text_view_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--MemberShip Code :-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Member Code"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/tv_member_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+
+            <!--Member Name:-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Member Name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/tv_member_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+
+            <!--Father Name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Father Name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/txt_father_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+
+            <!--Address-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Address"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/txt_add"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+
+            <!--Phone-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Phone No"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/tv_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+
+            <!--Plan Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorLighterGrey"
+                android:gravity="center|start"
+                android:paddingLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/calibri_bold"
+                    android:text="Plan Details : "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Plan Code-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Plan Code"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_plancode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/text_view_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Plan Table-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Plan Table"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_plantable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/text_view_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Mode & Term-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Mode"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_mode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/text_view_12" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Term"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/tv_term"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_14" />
+
+
+            </LinearLayout>
+
+
+            <!--Amount Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorLighterGrey"
+                android:gravity="center|start"
+                android:paddingLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/calibri_bold"
+                    android:text="Amount Details : "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Amount"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/et_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:hint="Enter Amount"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_14" />
+
+                <Button
+                    android:id="@+id/btn_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text=">"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_20" />
+
+            </LinearLayout>
+
+            <!--Deposit Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Deposit Amount"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/txt_deposit_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Maturity Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Maturity Amount"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/txt_mamount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+            <!--Maturity Interest-->
+            <LinearLayout
+                android:id="@+id/mi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Monthly Interest"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/txt_mInterest"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+            <!--Payment Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="2dp"
+                android:background="@color/colorLighterGrey"
+                android:gravity="center|start"
+                android:paddingLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/calibri_bold"
+                    android:text="Payment Details : "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Pay Mode: -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Pay Mode"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_pay_mode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/text_view_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Account Number"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_sbAcNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/text_view_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llout_cash_bal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="1dp"
+                android:visibility="visible"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Savings Balance"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+
+                <TextView
+                    android:id="@+id/et_cash_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:text="0"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/li_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <!--Sb Acc No-->
+          <!--      <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="Saving A/C No"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <TextView
+                        android:id="@+id/tv_sb_accNo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/xml_et_bg_border_gray"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>-->
+
+
+                <!--Balance :-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="Balance"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <TextView
+                        android:id="@+id/tv_av_bal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/xml_et_bg_border_gray"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_11" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--Sponsor Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorLighterGrey"
+                android:gravity="center|start"
+                android:paddingLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/calibri_bold"
+                    android:text="Sponsor Details : "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Sponsor Code-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Sponsor Code"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/txt_spcode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+
+            <!--Sponsor Name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Sponsor Name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/txt_spname"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGrey"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/xml_back_btn"
+                android:text="Submit"
+                android:textSize="@dimen/text_view_14"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

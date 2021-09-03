@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/colorWhite">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:contentPadding="4dp">
+
+        <LinearLayout
+            android:transitionName="TRANSITION_NAME"
+            android:id="@+id/ln_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_circleImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/own_profile"
+                app:border_color="@color/colorWhite"
+                app:border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_tv_no_f"
+                        android:transitionName="account_no_f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri_normal"
+                        android:text="Member Code:"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:transitionName="account_no"
+                        android:id="@+id/item_tv_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_normal"
+                        android:text="M00000001"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_tv_name_f"
+                        android:transitionName="name_f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri_normal"
+                        android:text="Member Name:"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:transitionName="name"
+                        android:id="@+id/item_tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_normal"
+                        android:text="Mr. Abhishek Majumder"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_tv_phone_f"
+                        android:transitionName="phone_number_f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri_normal"
+                        android:text="Phone Number:"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:transitionName="phone_number"
+                        android:id="@+id/item_tv_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_normal"
+                        android:text="9088045625"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_14" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_tv_address_f"
+                        android:transitionName="address_f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri_normal"
+                        android:text="Address:"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:transitionName="address"
+                        android:id="@+id/item_tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_normal"
+                        android:text="Kolkata"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_tv_email_f"
+                        android:transitionName="email_f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri_normal"
+                        android:text="Email Id:"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:transitionName="email"
+                        android:id="@+id/item_tv_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_normal"
+                        android:text="abhi0123@gmail.com"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

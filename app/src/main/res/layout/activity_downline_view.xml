@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DownlineViewActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_background">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/calibri_bold"
+            android:text="Downline View"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_16" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--Collector Code :-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Collector Code"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/tv_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorDeepGrey"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_show"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/xml_back_btn"
+                android:fontFamily="@font/calibri_bold"
+                android:text="Show"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_14" />
+
+            <RelativeLayout
+                android:id="@+id/rl_downline_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/li_trans_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@color/colorLighterGrey"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:background="@drawable/xml_red_box"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/calibri_bold"
+                        android:gravity="center"
+                        android:text="Name"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_12" />
+
+                    <TextView
+                        android:background="@drawable/xml_red_box"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/calibri_bold"
+                        android:gravity="center"
+                        android:text="Rank"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_12" />
+
+                    <TextView
+                        android:background="@drawable/xml_red_box"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/calibri_bold"
+                        android:gravity="center"
+                        android:text="Date of join"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_view_12" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_downline_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/li_trans_header"
+                    android:background="@color/colorWhite">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/li_headline"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:id="@+id/tv_loanid"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Loan Id"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_11" />
+
+            <TextView
+                android:id="@+id/tv_emino"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="EMI No"
+                android:textSize="@dimen/text_view_11"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/tv_emi"
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="EMI"
+                android:textSize="@dimen/text_view_11"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/tv_duedate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Due Date"
+                android:textSize="@dimen/text_view_11"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/tv_interest"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Interest"
+                android:textSize="@dimen/text_view_11"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/tv_principle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Principle"
+                android:textSize="@dimen/text_view_11"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/tv_currentBal"
+                android:layout_width="0dp"
+                android:layout_weight="1.3"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Current Bal"
+                android:textSize="@dimen/text_view_11"
+                android:textColor="@color/colorBlack" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

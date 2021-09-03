@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cmb_collector">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.hardware.location.gps" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <permission
+        android:name="com.company.app.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.company.app.permission.MAPS_RECEIVE" />
+    <application
+        android:name=".applicationClass.WCApplicationClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBOn8y4YIYHFTp0O67xc8vxs55KYKZXxRI" />
+
+        <activity
+            android:name=".activity.ODMapsActivity"
+            android:label="@string/title_activity_o_d_maps"/>
+        <activity
+            android:name=".activity.ChangePassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ForgotPassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DownlineViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ViewDownORCActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoadContactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MoneyTransferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InsertNewMember"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InvestmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OneTimeRegistration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoanCalculator"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EMICollection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoanRequisition"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MemberProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UpdateProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OwnProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utility.AppBaseClass"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PasswordTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RenewalPay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InvestmentCalculator"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MobileRecharge"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ORCActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FDActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RDActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.QueryAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BillPaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoanSection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DailyAndMonthlyRenewal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RenewalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewRequest"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FundTransferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LastTenTransaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FingerPrintActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AccountSummary"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoanEMI"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RecurringRenewal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SBAcount"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EmiPay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NonEMIPayment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddBeneficiaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddFundActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BeneficiaryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TransferOtherBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TransferToOtherAccActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TransferToOwnAccActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ProfileDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ViewORCActivity"
+            android:screenOrientation="portrait" /> <!-- uCrop cropping activity -->
+        <activity
+            android:name=".utility.ImagePickerActivity"
+            android:screenOrientation="portrait" /> <!-- uCrop cropping activity -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NoNetworkActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UserDialog" />
+        <activity
+            android:name=".activity.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LogviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AttendenceList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AttendenceListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewAgentJoining"
+            android:screenOrientation="portrait" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepath" />
+        </provider>
+
+        <service
+            android:name=".services.MyService"
+            android:enabled="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+
+        <receiver android:name=".activity.InsertNewMember$InsertMemberNetworkStateChecker">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".activity.NewAgentJoining$InsertagentNetworkStateChecker">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".activity.NewAccountActivity$InsertnewaccountNetworkStateChecker">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".utility.NetworkChange">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

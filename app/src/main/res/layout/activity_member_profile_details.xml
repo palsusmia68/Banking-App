@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ln_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_member_profile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_background">
+
+        <ImageView
+            android:id="@+id/img_member_profile"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:padding="8dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/calibri_bold"
+            android:text="Member Profile Details"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_16" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:transitionName="TRANSITION_NAME">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_circleImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/profile_view"
+            app:border_color="@color/colorBlack"
+            app:border_width="2dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_bold"
+                        android:text="Name"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <TextView
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv_dob"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_bold"
+                        android:text="Email ID"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <TextView
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv_dob"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_aadhar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_bold"
+                        android:text="Aadhaar Number"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <TextView
+                        android:id="@+id/et_aadhar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv_dob"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_15" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_dob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_bold"
+                        android:text="Date of Birth"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <TextView
+                        android:id="@+id/et_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv_dob"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_15" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_bold"
+                        android:text="Communication Address"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <TextView
+                        android:id="@+id/et_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv_dob"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_15" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_bold"
+                        android:text="Phone No"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <TextView
+                        android:id="@+id/et_phone_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv_dob"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_15" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_bold"
+                        android:text="PAN No"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <TextView
+                        android:id="@+id/et_pan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv_dob"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_15" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

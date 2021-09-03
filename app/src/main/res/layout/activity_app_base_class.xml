@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utility.AppBaseClass">
+
+    <LinearLayout
+        android:id="@+id/li_blank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/li_footer"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/li_footer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!--1st Tab: -->
+        <LinearLayout
+            android:id="@+id/li_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_home"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:src="@drawable/tab_icon_one_white" />
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri_bold"
+                android:gravity="center"
+                android:text="Home"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_11" />
+
+        </LinearLayout>
+
+        <!--&lt;!&ndash;2nd Tab: &ndash;&gt;-->
+        <!--<LinearLayout-->
+        <!--android:id="@+id/li_history"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/img_history"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:src="@drawable/tab_icon_two_white" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_history"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="@font/calibri_bold"-->
+        <!--android:gravity="center"-->
+        <!--android:text="History"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--android:textSize="@dimen/text_view_11" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--&lt;!&ndash;3rd Tab&ndash;&gt;-->
+        <!--<LinearLayout-->
+        <!--android:id="@+id/li_notice"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/img_notice"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:padding="3dp"-->
+        <!--android:src="@drawable/tab_icon_three_white" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_notice"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="@font/calibri_bold"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Notice"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--android:textSize="@dimen/text_view_11" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--4th Tab: -->
+        <LinearLayout
+            android:id="@+id/li_logout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_logout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:padding="3dp"
+                android:src="@drawable/log_out" />
+
+            <TextView
+                android:id="@+id/tv_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri_bold"
+                android:gravity="center"
+                android:text="Logout"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_11" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

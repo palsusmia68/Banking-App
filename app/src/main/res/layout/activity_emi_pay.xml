@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EmiPay">
+
+    <RelativeLayout
+        android:id="@+id/rl_renewalpay_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_background">
+
+        <ImageView
+            android:id="@+id/img_renewalPay"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/calibri_bold"
+            android:text="EMI Pay"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_18" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_renewalpay_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:background="@color/colorLighterGrey"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="Branch Code"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_13" />
+
+                    <TextView
+                        android:id="@+id/tv_branch_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorWhite"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="001"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_11" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="Branch Name"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_13" />
+
+                    <TextView
+                        android:id="@+id/tv_branch_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorWhite"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="HO"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_11" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Member Code"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/et_member_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Loan ID"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/tv_loanId"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorLighterGrey"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="2">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="0.8"-->
+            <!--android:background="@drawable/xml_bgleftradius"-->
+            <!--android:fontFamily="@font/calibri_bold"-->
+            <!--android:gravity="center"-->
+            <!--android:text="App Name"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="@dimen/text_view_14" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/et_appName"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1.2"-->
+            <!--android:background="@color/colorLighterGrey"-->
+            <!--android:fontFamily="@font/calibri_normal"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:textSize="@dimen/text_view_14" />-->
+
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Pay Date"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/et_date"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:drawableRight="@drawable/xml_date"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="EMI No."
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/tv_emi_no"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="EMI Amount"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_11" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Pay Mode"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_payMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llout_cash_bal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="1dp"
+                android:visibility="visible"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Savings Balance"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+
+                <TextView
+                    android:id="@+id/et_cash_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/li_sbac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/calibri_bold"
+                        android:text="Saving A/C Details:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_18" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="Account Number"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/xml_et_bg_border"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spin_sbAcNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|start"
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/text_view_12" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+          <!--      <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="SB A/C No"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/xml_et_bg_border"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spin_sbacno"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_view_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:text="Balance"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+
+                    <TextView
+                        android:id="@+id/et_sb_balance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/xml_et_bg_border_gray"
+                        android:fontFamily="@font/calibri_normal"
+                        android:gravity="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Remarks"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+
+                <EditText
+                    android:id="@+id/et_remarks"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center|start"
+                    android:hint="Enter Remarks"
+                    android:paddingLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_pay"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/xml_back_btn"
+                    android:fontFamily="@font/calibri_bold"
+                    android:inputType="text"
+                    android:text="Pay"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_18" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

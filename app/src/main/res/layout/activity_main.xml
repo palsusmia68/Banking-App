@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:id="@+id/lv">
+
+    <!--    If Company Icon not Available   -->
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/calibri_bold"
+                android:text="@string/company_name"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/calibri_bold"
+                android:text="COLLECTOR"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_16" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/li_sub_header"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/rl_main">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/backk" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:id="@+id/txt_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/circle_image"
+            android:fontFamily="@font/calibri_normal"
+            android:text="Welcome"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_20"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_welcome"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/circle_image"
+            android:fontFamily="@font/calibri_bold"
+            android:text="Test Collector"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_16" />
+
+
+        <!---->
+        <LinearLayout
+            android:id="@+id/li_ava_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/xml_balance_bg"
+                android:padding="8dp"
+                android:src="@drawable/rupee" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/calibri_normal"
+                android:gravity="center"
+                android:text="Available Balance"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_14" />
+
+            <TextView
+                android:id="@+id/txt_aval_bal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/calibri_normal"
+                android:gravity="center"
+                android:text="0"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_14" />
+
+
+        </LinearLayout>
+        <!---->
+        <LinearLayout
+            android:id="@+id/li_view_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:fontFamily="@font/calibri_bold"
+                android:gravity="center"
+                android:text="VIEW BALANCE"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_18" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_turn_on"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/calibri_bold"
+            android:gravity="center"
+            android:text="Turn ON"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_15"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_turn_off"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/calibri_bold"
+            android:gravity="center"
+            android:text="Turn OFF"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_15"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_contain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/li_sub_header">
+
+        <GridView
+            android:id="@+id/first_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:horizontalSpacing="8dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="8dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

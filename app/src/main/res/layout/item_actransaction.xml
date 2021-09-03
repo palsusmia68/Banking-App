@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="2dp"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/txt_inst"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="InstNo"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/calibri_normal"
+            android:gravity="center"
+            android:background="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Date"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/calibri_normal"
+            android:layout_marginLeft="1dp"
+            android:gravity="center"
+            android:background="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txt_deposit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Deposit"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="1dp"
+            android:fontFamily="@font/calibri_normal"
+            android:gravity="center"
+            android:background="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txt_withdrawl"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Withdrawl"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/calibri_normal"
+            android:layout_marginLeft="1dp"
+            android:gravity="center"
+            android:background="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txt_bal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Balance"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/calibri_normal"
+            android:layout_marginLeft="1dp"
+            android:gravity="center"
+            android:background="@color/colorWhite" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

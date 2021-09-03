@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_login_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/li_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_background"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp">
+
+        <!--If Company logo is not available-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/company_name"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_view_18"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:id="@+id/welcomeLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="Welcome back!"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/calibri_normal"
+            android:text="Login to continue with"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/calibri_normal"
+            android:text="Collector App"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/li_title"
+        android:layout_marginTop="-30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:id="@+id/li_contain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_grid_bg"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radio_member"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:buttonTint="@color/colorPrimary"
+                                android:fontFamily="@font/calibri_bold"
+                                android:text="MEMBER"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="17sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_agent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:buttonTint="@color/colorPrimary"
+                                android:fontFamily="@font/calibri_bold"
+                                android:text="AGENT"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="17sp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.4"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_person" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/edit_code"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.6"
+                            android:background="@drawable/xml_et_bg_border"
+                            android:fontFamily="@font/calibri_normal"
+                            android:hint="Enter Code"
+                            android:inputType="textAutoComplete|textAutoCorrect|textCapCharacters"
+                            android:padding="5dp"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_view_14" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.4"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_lock" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.6"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4">
+
+                                <com.goodiebag.pinview.Pinview
+                                    android:id="@+id/pinview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cursorVisible="false"
+                                    app:forceKeyboard="false"
+                                    app:inputType="number"
+                                    app:pinBackground="@drawable/xml_et_bg_border"
+                                    app:pinHeight="30dp"
+                                    app:pinLength="4"
+                                    app:pinWidth="30dp"
+                                    app:textSize="8sp" />
+
+                            </LinearLayout>
+                            <!-- app:pinBackground="@drawable/xml_btn_back"-->
+                            <TextView
+                                android:id="@+id/tvShow"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/calibri_bold"
+                                android:gravity="center"
+                                android:text="Show"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/text_view_13" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/pin_hidden_edittext"
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            android:contentDescription="@string/pin_content_desc"
+                            android:cursorVisible="false"
+                            android:gravity="center_horizontal"
+                            android:maxLength="5"
+                            android:password="true"
+                            android:textColor="#00000000" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_wrongpass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Invalid Password or usercode"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_view_13"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_fgpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/xml_transparent"
+                android:contextClickable="true"
+                android:fontFamily="@font/calibri_bold"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="Forgot password ?"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_view_15" />
+
+            <LinearLayout
+                android:id="@+id/li_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/login_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/xml_btn_enable_back"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Sign In"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_18"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/li_login"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_forgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/li_login"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Forgot Password?"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_view_14"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:text="Don't have a Collector account?"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/signup_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/xml_transparent"
+                    android:contextClickable="true"
+                    android:fontFamily="@font/calibri_bold"
+                    android:text="SIGN UP"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_view_15" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

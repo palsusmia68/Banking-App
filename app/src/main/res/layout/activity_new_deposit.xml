@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activity.NewDeposit">
+
+    <RelativeLayout
+        android:id="@+id/rl_deposit_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_background">
+
+        <ImageView
+            android:id="@+id/depo_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/back"
+            android:layout_marginLeft="5dp"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="New Deposit"
+            android:textSize="@dimen/text_view_18"
+            android:textColor="@color/colorWhite" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                android:src="@drawable/logout" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_deposit_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/li_sub_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <!--Policy No: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Policy No."
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/txt_policy_id"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:inputType="textCapCharacters"
+                        android:hint="Enter Policy No."
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--CurrentDate -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Date of Current"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/txt_current_date"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:inputType="textCapCharacters"
+                        android:hint="Current Date"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Member ID :-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Member ID"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <EditText
+                        android:id="@+id/txt_member_id"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Member ID"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Branch Name: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Branch name"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite">
+
+                        <Spinner
+                            android:id="@+id/branch_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_view_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/li_sub_header">
+
+                <!--Section Header of Personal Information: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Personal Information"
+                        android:textSize="@dimen/text_view_18"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp" />
+
+
+                </LinearLayout>
+
+                <!--Applicant Name:-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Applicant Name"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/edit_applic_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:inputType="textCapCharacters"
+                        android:hint="Applicant Name"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Father Name: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Father Name"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/edit_father_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:inputType="textCapCharacters"
+                        android:hint="Father Name"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--DOB : -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Date of Birth"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/edit_dob"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:inputType="textCapCharacters"
+                        android:hint="DOB"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Phone No: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Phone No."
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/edit_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:inputType="textCapCharacters"
+                        android:hint="Phone No."
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Section Header of Plan Details: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plan Details"
+                        android:textSize="@dimen/text_view_18"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp" />
+
+
+                </LinearLayout>
+
+                <!--Plan Name: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Plan Name"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite">
+
+                        <Spinner
+                            android:id="@+id/plan_name_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_view_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Plan Code: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Plan Table"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite">
+
+                        <Spinner
+                            android:id="@+id/plan_code_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_view_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Term: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Term Details"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <EditText
+                        android:id="@+id/edit_term"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:inputType="textCapCharacters"
+                        android:hint="Term Details"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Mode :-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Mode"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite">
+
+                        <Spinner
+                            android:id="@+id/mode_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_view_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--MIS Mode: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="MIS Mode"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite">
+
+                        <Spinner
+                            android:id="@+id/mis_mode_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_view_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Amount: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Amount"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <EditText
+                        android:id="@+id/edit_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:hint="Amount"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Deposit Amount: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Deposit Amount"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/txt_deposit_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Deposit Amount"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Maturity Amount: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Maturity Amount"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/txt_maturity_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Maturity Amount"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Maturity Details: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Maturity Details"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/txt_maturity_details"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Maturity Details"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Section Header of Payment Details: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment Details"
+                        android:textSize="@dimen/text_view_18"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp" />
+
+
+                </LinearLayout>
+
+                <!--Pay By :-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Pay By"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite">
+
+                        <Spinner
+                            android:id="@+id/pay_by_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_view_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Acount No:-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="A/C No."
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite">
+
+                        <Spinner
+                            android:id="@+id/account_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_view_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Available Balance: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Available Balance"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/txt_aval_bal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Section Header of Payment Details: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Associate Details"
+                        android:textSize="@dimen/text_view_18"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp" />
+
+                </LinearLayout>
+
+                <!--Associate Code: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Associate Code"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <EditText
+                        android:id="@+id/edit_asso_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Associate Code"
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Associate Rank: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Associate Rank"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/edit_asso_rank"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Associate Rank"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <!--Associate Name: -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Associate Name"
+                        android:textSize="@dimen/text_view_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/edit_asso_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:textSize="@dimen/text_view_14"
+                        android:gravity="center"
+                        android:hint="Associate Name"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:background="@color/colorWhite" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Submit Button:-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/xml_back_btn"
+                    android:text="Submit"
+                    android:inputType="text"
+                    android:textSize="@dimen/text_view_18"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/calibri_bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

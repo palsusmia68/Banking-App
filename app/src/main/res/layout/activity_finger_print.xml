@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_finger"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/xml_et_bg_border"
+        android:padding="10dp"
+        android:src="@drawable/ic_fingerprint_red" />
+
+    <EditText
+        android:id="@+id/et_user_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_finger"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/xml_et_bg_border"
+        android:gravity="center"
+        android:hint="Enter User Code"
+        android:inputType="textCapCharacters"
+        android:padding="10dp"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_user_code"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btn_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_red_box"
+            android:padding="5dp"
+            android:text="Capture"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btn_match"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/xml_red_box"
+            android:padding="5dp"
+            android:text="Match"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_stop_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/xml_red_box"
+            android:padding="5dp"
+            android:text="Stop Capture"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+</RelativeLayout>

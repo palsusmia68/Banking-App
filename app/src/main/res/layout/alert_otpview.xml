@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_login_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_grid_bg"
+    android:layout_gravity="center">
+    <TextView
+        android:id="@+id/otpheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="OTP Box"
+        android:textColor="#EF8123"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"/>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#EF8123"
+        android:layout_below="@+id/otpheading"/>
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_weight="4">
+
+        <com.goodiebag.pinview.Pinview
+            android:id="@+id/pinview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cursorVisible="false"
+            app:forceKeyboard="false"
+            app:inputType="number"
+            android:layout_marginTop="10dp"
+            app:pinBackground="@drawable/xml_et_bg_border"
+            app:pinHeight="30dp"
+            app:pinLength="4"
+            app:pinWidth="30dp"
+            app:textSize="8sp" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/wrongOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ll"
+        android:text="You have Entered wrong OTP"
+        android:textColor="#EF8123"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15dp"/>
+    <Button
+        android:id="@+id/Yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll"
+        android:background="#ffffff"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/No"
+        android:visibility="gone"
+        android:text="YES"
+        android:textSize="20dp"
+        android:textColor="#EF8123"
+        android:layout_marginBottom="15dp"/>
+
+
+    <Button
+        android:id="@+id/No"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wrongOtp"
+        android:background="#ffffff"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="OK"
+        android:textSize="20dp"
+        android:textColor="#EF8123"
+        android:layout_marginBottom="15dp"/>
+</RelativeLayout>

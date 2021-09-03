@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.OneTimeRegistration">
+
+    <LinearLayout
+        android:id="@+id/li_header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/login_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="30dp">
+
+        <!--        If Company logo is not available    -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/company_name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_view_18"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img_regis"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/calibri_normal"
+            android:text="Create Collector Account"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_16" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/li_header"
+        android:layout_marginTop="-30dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_grid_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="35dp">
+
+                <!--Radio Button: -->
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RadioButton
+                        android:id="@+id/radio_member"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:fontFamily="@font/calibri_bold"
+                        android:text="MEMBER"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_view_18" />
+
+                    <RadioButton
+                        android:id="@+id/radio_agent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/colorPrimary"
+                        android:fontFamily="@font/calibri_bold"
+                        android:text="AGENT"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_view_18" />
+
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/edit_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:drawableLeft="@drawable/xml_ic_phone"
+                    android:fontFamily="@font/calibri_normal"
+                    android:hint="Enter Phone No."
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/edit_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:drawableLeft="@drawable/xml_ic_code"
+                    android:enabled="false"
+                    android:fontFamily="@font/calibri_normal"
+                    android:hint="Code"
+                    android:padding="5dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/xml_et_bg_border_gray"
+                    android:drawableLeft="@drawable/xml_ic_name"
+                    android:enabled="false"
+                    android:fontFamily="@font/calibri_normal"
+                    android:hint="Name"
+                    android:padding="5dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/edit_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:drawableLeft="@drawable/xml_ic_password"
+                    android:enabled="false"
+                    android:fontFamily="@font/calibri_normal"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <!--mpin Layout-->
+                <LinearLayout
+                    android:id="@+id/li_mpin_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!--Create mPIN-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/calibri_normal"
+                            android:text="Enter MPIN"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_view_16" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <EditText
+                                android:id="@+id/edit_one_mpin"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xml_et_bg_border"
+                                android:fontFamily="@font/calibri_normal"
+                                android:gravity="center"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_view_13" />
+
+                            <EditText
+                                android:id="@+id/edit_two_mpin"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xml_et_bg_border"
+                                android:fontFamily="@font/calibri_normal"
+                                android:gravity="center"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_view_13" />
+
+                            <EditText
+                                android:id="@+id/edit_three_mpin"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xml_et_bg_border"
+                                android:fontFamily="@font/calibri_normal"
+                                android:gravity="center"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_view_13" />
+
+                            <EditText
+                                android:id="@+id/edit_four_mpin"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xml_et_bg_border"
+                                android:fontFamily="@font/calibri_normal"
+                                android:gravity="center"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_view_13" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <!--Reenter MPIN-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/calibri_normal"
+                            android:text="ReEnter MPIN"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_view_16" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:weightSum="4">
+
+                            <EditText
+                                android:id="@+id/edit_one_rpin"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xml_et_bg_border"
+                                android:fontFamily="@font/calibri_normal"
+                                android:gravity="center"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_view_13" />
+
+                            <EditText
+                                android:id="@+id/edit_two_rpin"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xml_et_bg_border"
+                                android:fontFamily="@font/calibri_normal"
+                                android:gravity="center"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_view_13" />
+
+                            <EditText
+                                android:id="@+id/edit_three_rpin"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xml_et_bg_border"
+                                android:fontFamily="@font/calibri_normal"
+                                android:gravity="center"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_view_13" />
+
+                            <EditText
+                                android:id="@+id/edit_four_rpin"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xml_et_bg_border"
+                                android:fontFamily="@font/calibri_normal"
+                                android:gravity="center"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_view_13" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/xml_back_btn"
+                android:enabled="false"
+                android:fontFamily="@font/calibri_bold"
+                android:text="Sign Up"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_18" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/calibri_normal"
+                    android:text="Already You Have an Account? "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/calibri_bold"
+                    android:text="SIGN IN"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

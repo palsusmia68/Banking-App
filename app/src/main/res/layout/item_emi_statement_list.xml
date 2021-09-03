@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/li_headline"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/txt_loanid"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Loan Id"
+                android:textSize="@dimen/text_view_12"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/txt_emino"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="EMI No"
+                android:textSize="@dimen/text_view_12"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Date"
+                android:textSize="@dimen/text_view_12"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/txt_amount"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Amount"
+                android:textSize="@dimen/text_view_12"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/txt_principle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="principle"
+                android:textSize="@dimen/text_view_12"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/txt_interest"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="interest"
+                android:textSize="@dimen/text_view_12"
+                android:textColor="@color/colorBlack" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

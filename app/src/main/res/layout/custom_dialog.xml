@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="6dp"
+    app:cardMaxElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xml_dialog_back">
+
+        <LinearLayout
+            android:id="@+id/li_header"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Photo"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_16"
+                android:fontFamily="@font/calibri_normal"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cameraImage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/camera" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Camera"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/calibri_normal"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/galleryImage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/gallery" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gallery"
+                        android:textSize="@dimen/text_view_14"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/calibri_normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_remove"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/xml_remove_bg"
+                        android:src="@drawable/ic_delete"
+                        android:padding="9dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Remove Photo"
+                        android:textSize="@dimen/text_view_14"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/calibri_normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/li_header"
+            android:background="@color/colorLightGrey" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_below="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_view_14"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="sans-serif-medium" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

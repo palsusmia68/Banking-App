@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/company_name"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="EMI Payment Details"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/calibri_bold"
+                android:gravity="center_vertical"
+                android:text="Branch Code:"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_13" />
+
+            <TextView
+                android:id="@+id/tv_branch_code_p"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/calibri_normal"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/colorBlack" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/calibri_bold"
+                android:gravity="center_vertical"
+                android:text="Branch Name:"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_13" />
+
+            <TextView
+                android:id="@+id/tv_branch_name_p"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/calibri_normal"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/colorBlack" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:fontFamily="@font/calibri_bold"
+            android:gravity="center_vertical"
+            android:text="Member Code:"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+        <TextView
+            android:id="@+id/tv_member_code_p"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:fontFamily="@font/calibri_normal"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:fontFamily="@font/calibri_bold"
+            android:gravity="center_vertical"
+            android:text="Loan ID:"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+        <TextView
+            android:id="@+id/tv_Loanid_p"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/calibri_normal"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:fontFamily="@font/calibri_bold"
+            android:gravity="center_vertical"
+            android:text="Pay Date:"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+        <TextView
+            android:id="@+id/tv_date_p"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:fontFamily="@font/calibri_normal"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:fontFamily="@font/calibri_bold"
+            android:gravity="center_vertical"
+            android:text="EMI No.:"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+        <TextView
+            android:id="@+id/tv_emino_p"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/calibri_normal"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:fontFamily="@font/calibri_bold"
+            android:gravity="center_vertical"
+            android:text="EMI Amount:"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+        <TextView
+            android:id="@+id/tv_amount_p"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:fontFamily="@font/calibri_normal"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:fontFamily="@font/calibri_bold"
+            android:gravity="center_vertical"
+            android:text="Pay Mode:"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+        <TextView
+            android:id="@+id/tv_pay_mode_p"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:fontFamily="@font/calibri_normal"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:fontFamily="@font/calibri_bold"
+            android:gravity="center_vertical"
+            android:text="Remarks:"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+        <TextView
+            android:id="@+id/tv_remarks_p"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:fontFamily="@font/calibri_normal"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/li_sbac_p"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri_bold"
+                android:text="Saving A/C Details:"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:fontFamily="@font/calibri_bold"
+                android:gravity="center_vertical"
+                android:text="SB A/C No.:"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_14" />
+
+            <TextView
+                android:id="@+id/tv_acc_no_p"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:fontFamily="@font/calibri_normal"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_14" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:fontFamily="@font/calibri_bold"
+                android:gravity="center_vertical"
+                android:text="Balance:"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_14" />
+
+            <TextView
+                android:id="@+id/tv_sb_balance_p"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:fontFamily="@font/calibri_normal"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_14" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

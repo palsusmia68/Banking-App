@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.QueryAccountActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_query"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/login_background">
+
+        <ImageView
+            android:id="@+id/img_query"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/back"
+            android:padding="8dp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Query Account"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_20"
+            android:fontFamily="@font/calibri_bold" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_query"
+        android:background="@color/colorWhite" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_query"
+        android:padding="10dp"
+        android:background="@color/colorLighterGrey">
+
+        <GridView
+            android:id="@+id/grid_query"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:horizontalSpacing="8dp"
+            android:verticalSpacing="8dp"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"></GridView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

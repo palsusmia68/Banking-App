@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChangePassActivity">
+
+    <LinearLayout
+        android:id="@+id/li_header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/login_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="30dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/calibri_normal"
+            android:text="Change Password"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_18" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/li_header"
+        android:layout_marginTop="-30dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_grid_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="25dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/llout_oldpin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_view_14"
+                        android:text="Enter Old MPIN"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4">
+
+                                <com.goodiebag.pinview.Pinview
+                                    android:id="@+id/pinviewold"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cursorVisible="false"
+                                    app:forceKeyboard="false"
+                                    app:inputType="number"
+                                    app:pinBackground="@drawable/xml_et_bg_border"
+                                    app:pinHeight="30dp"
+                                    app:pinLength="4"
+                                    app:pinWidth="30dp"
+                                    app:textSize="8sp" />
+
+                            </LinearLayout>
+                            <!-- app:pinBackground="@drawable/xml_btn_back"-->
+                            <TextView
+                                android:id="@+id/tvShowold"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/calibri_bold"
+                                android:gravity="center"
+                                android:text="Show"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/text_view_13" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_view_14"
+                    android:text="Enter new MPIN"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.6"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
+
+                            <com.goodiebag.pinview.Pinview
+                                android:id="@+id/pinviewnew"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cursorVisible="false"
+                                app:forceKeyboard="false"
+                                app:inputType="number"
+                                app:pinBackground="@drawable/xml_et_bg_border"
+                                app:pinHeight="30dp"
+                                app:pinLength="4"
+                                app:pinWidth="30dp"
+                                app:textSize="8sp" />
+
+                        </LinearLayout>
+                        <!-- app:pinBackground="@drawable/xml_btn_back"-->
+                        <TextView
+                            android:id="@+id/tvShownew"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/calibri_bold"
+                            android:gravity="center"
+                            android:text="Show"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_view_13" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_view_14"
+                    android:text="Re-enter new MPIN"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.6"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
+
+                            <com.goodiebag.pinview.Pinview
+                                android:id="@+id/pinviewRe"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cursorVisible="false"
+                                app:forceKeyboard="false"
+                                app:inputType="number"
+                                app:pinBackground="@drawable/xml_et_bg_border"
+                                app:pinHeight="30dp"
+                                app:pinLength="4"
+                                app:pinWidth="30dp"
+                                app:textSize="8sp" />
+
+                        </LinearLayout>
+                        <!-- app:pinBackground="@drawable/xml_btn_back"-->
+                        <TextView
+                            android:id="@+id/tvShowRE"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/calibri_bold"
+                            android:gravity="center"
+                            android:text="Show"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_view_13" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/xml_back_btn"
+                android:textAllCaps="false"
+                android:fontFamily="@font/calibri_bold"
+                android:text="Submit"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_18" />
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

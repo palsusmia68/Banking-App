@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MoneyTransferActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_money_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/login_background">
+
+        <ImageView
+            android:id="@+id/img_mon_tran"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/calibri_bold"
+            android:text="Money Transfer"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_20" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_contain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_money_transfer"
+        android:padding="10dp">
+
+        <GridView
+            android:id="@+id/first_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:horizontalSpacing="7dp"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="7dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

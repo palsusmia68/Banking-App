@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MobileRecharge">
+
+    <RelativeLayout
+        android:id="@+id/rl_bill_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/login_background">
+
+        <ImageView
+            android:id="@+id/img_mb_rechar"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/calibri_bold"
+            android:text="Mobile Recharge"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_20" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_bill_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <!--Mobile-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Mobile No."
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/edit_mobile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:hint="Enter Mobile No."
+                    android:inputType="phone"
+                    android:maxLength="13"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <ImageView
+                    android:id="@+id/iv_contact"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="@color/colorWhite"
+                    android:src="@drawable/contact" />
+
+            </LinearLayout>
+
+            <!--Select Operator-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Select Operator"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_operator"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Select Operator-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Select Circle"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_circle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_view_14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Rec Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Recharge Amount"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/edit_rchrg_ammount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.9"
+                    android:background="@color/colorWhite"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:hint="Enter Amount"
+                    android:inputType="number"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:text="@string/browse_plan"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <!--Confirm Rec Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/xml_bgleftradius"
+                    android:fontFamily="@font/calibri_bold"
+                    android:gravity="center"
+                    android:text="Confirm Recharge Amount"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_view_14" />
+
+                <EditText
+                    android:id="@+id/edit_confirm_rchrg_ammount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorWhite"
+                    android:fontFamily="@font/calibri_normal"
+                    android:gravity="center"
+                    android:hint="ReEnter Amount"
+                    android:inputType="number"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/xml_back_btn"
+                android:text="Confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

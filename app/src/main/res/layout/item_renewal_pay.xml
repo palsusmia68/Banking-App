@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:id="@+id/li_headline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <TextView
+            android:id="@+id/txt_policyno"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Policy No"
+            android:textSize="@dimen/text_view_10"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/txt_appname"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="App Name"
+            android:textSize="@dimen/text_view_10"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/txt_policyamount"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Policy Amount"
+            android:textSize="@dimen/text_view_10"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/txt_plan"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Plan"
+            android:textSize="@dimen/text_view_10"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/txt_total_dep"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Total Dep"
+            android:textSize="@dimen/text_view_10"
+            android:textColor="@color/colorBlack" />
+
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/xml_bgrightradius"
+            android:text="Pay"
+            android:textSize="@dimen/text_view_10"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

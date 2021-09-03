@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ForgotPassActivity">
+
+
+    <LinearLayout
+        android:id="@+id/li_header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/login_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="30dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/calibri_normal"
+            android:text="Forgot Password"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view_18" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/li_header"
+        android:layout_marginTop="-30dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_grid_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="35dp">
+
+
+                <EditText
+                    android:id="@+id/edit_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:drawableLeft="@drawable/xml_ic_phone"
+                    android:fontFamily="@font/calibri_normal"
+                    android:hint="Enter Phone No."
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/edit_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.6"
+                    android:drawableLeft="@drawable/xml_ic_code"
+                    android:background="@drawable/xml_et_bg_border"
+                    android:fontFamily="@font/calibri_normal"
+                    android:hint="Enter Code"
+                    android:inputType="textAutoComplete|textAutoCorrect|textCapCharacters"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_view_14" />
+
+                <LinearLayout
+                    android:id="@+id/llout_otp"
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Enter OTP here"/>
+                    <EditText
+                        android:id="@+id/edit_otp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:visibility="visible"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/xml_et_bg_border"
+                        android:drawableLeft="@drawable/xml_ic_password"
+                        android:fontFamily="@font/calibri_normal"
+                        android:hint="Enter OTP"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:maxLength="6"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_view_14" />
+
+                    <TextView
+                        android:padding="10dp"
+                        android:id="@+id/tv_resendotp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Resend OTP"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/xml_back_btn"
+                android:textAllCaps="false"
+                android:fontFamily="@font/calibri_bold"
+                android:text="Submit"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_view_18" />
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

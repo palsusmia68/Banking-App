@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorLighterGrey"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="10dp"
+        android:weightSum="6"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_ac_no"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="A/C No"
+            android:visibility="gone"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/item_tv_acNo"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Account No"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/item_trans"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Transaction No"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/item_purpose"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Purpose"
+            android:visibility="gone"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/item_narra"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Narration"
+            android:visibility="gone"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/item_debit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Deposit"
+            android:visibility="visible"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/item_credit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Withdrawal"
+            android:visibility="visible"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/item_payment"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Balance"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/item_date"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Date"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</LinearLayout>
